@@ -54,6 +54,10 @@ body {
 	
 }
 
+#mailToLink {
+	visibility: hidden
+}
+
 textarea {
 	width: 300px;
 }
