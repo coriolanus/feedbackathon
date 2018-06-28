@@ -1,0 +1,11 @@
+body {background-color: transparent;}
+
+#feedback {
+	background: white;
+	padding: 50px;
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 300px;
+}

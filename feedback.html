@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Feedback overlay</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="feedback.css"></link>
+	<script type="text/javascript" src="feedback.js"></script>
+</head>
+<body>
+	<div id="feedback">
+	THIS IS AN AMAZING FEEDBACK WIDGET
+	<form>
+		<div class="radio">
+  		<label><input type="radio" name="problem" checked="true"> I want to report a problem...</label>
+		</div>
+		<div class="radio">
+  		<label><input type="radio" name="support"> I need some help with...</label>
+		</div>
+		<div class="radio">
+		  <label><input type="radio" name="love"> I love...</label>
+		</div>
+		<div class="radio">
+		  <label><input type="radio" name="idea"> I have an idea...</label>
+		</div>
+		<div class="radio">
+		  <label><input type="radio" name="other"> Something else...</label>
+		</div>
+		<textarea  class="form-control" id="comment" rows="3"></textarea>
+		<button class="btn">Never mind</button>
+		<button class="btn btn-primary" onclick="get_form_details();">Submit</button>
+	</form>
+	</div>
+</body>
+
+</html>
