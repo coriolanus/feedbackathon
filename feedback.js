@@ -16,18 +16,22 @@ function getParamValue(paramName)
 function send_feedback() {
 	// Step 0: Assemble body of email
 	var env = get_environment_details();
-	var form = get_form_details();
+	var details = get_form_details();
 
 	var title = getParamValue('title')
 	var email = getParamValue('email')
 
-	var subject = "Feedback on " + title;
-	var content = env + form;
+	// Step 1: Craft link
+	var subject = "Feedback for " + title;
+	var content = "Category: " + details['feed']
+				  + "\n\nMessage: " + details['comment']
+				  + "\n\nUser Agent: " + env['userAgent'] + "\nTimestamp: " + env['timestamp']
 
 	// Step 1: Craft link
-	//var href = "mailto://" + contact + "?subject=" + subject + "&body=" + content;
-
-	// Step 2: Click it!
+	var href = 'mailto:' + email + '?subject=' + subject + '&body=' + encodeURIComponent(content);
+	var mailToLink = document.getElementById("mailToLink");
+	mailToLink.href = href;
+	mailToLink.click();
 }
 
 function get_environment_details() {
@@ -39,8 +43,10 @@ function get_environment_details() {
 }
 
 function get_form_details() {
+	var feed = $('input[name="feed"]:checked').parent('label').text();
 	var comment = $('#comment').val();
 	return {
+		"feed": feed,
 		"comment": comment
 	}
 }
