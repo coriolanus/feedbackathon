@@ -4,6 +4,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="feedback.css"></link>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<script type="text/javascript" src="feedback.js"></script>
 </head>
 <body>
@@ -11,19 +12,19 @@
 	<h4>Feedback</h4>
 	<form>
 		<div class="radio">
-  		<label><input type="radio" name="problem" checked="true"> I want to report a problem...</label>
+  		<label><input type="radio" name="problem" checked="true"><i class="fas fa-bug"></i> I want to report a problem...</label>
 		</div>
 		<div class="radio">
-  		<label><input type="radio" name="support"> I need some help with...</label>
+  		<label><input type="radio" name="support"><i class="fas fa-wrench"></i> I need some help with...</label>
 		</div>
 		<div class="radio">
-		  <label><input type="radio" name="love"> I love...</label>
+		  <label><input type="radio" name="love"><i class="fas fa-heart"></i> I love...</label>
 		</div>
 		<div class="radio">
-		  <label><input type="radio" name="idea"> I have an idea...</label>
+		  <label><input type="radio" name="idea"><i class="fas fa-lightbulb"></i> I have an idea...</label>
 		</div>
 		<div class="radio">
-		  <label><input type="radio" name="other"> Something else...</label>
+		  <label><input type="radio" name="other"><i class="fas fa-stream"></i> Something else...</label>
 		</div>
 		<textarea  class="form-control" id="comment" rows="3"></textarea>
 		<div id='submit_btn'>
