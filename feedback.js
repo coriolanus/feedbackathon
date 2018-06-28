@@ -4,7 +4,7 @@ window.onload = function() {
 }
 
 function send_feedback() {
-	// Step 1: Craft link
+	// Step 0: Assemble body of email
 	var env = get_environment_details();
 	var details = get_form_details();
 
@@ -13,7 +13,15 @@ function send_feedback() {
 				  + "\n\nMessage: " + details['comment'] 
 				  + "\n\nUser Agent: " + env['userAgent'] + "\nTimestamp: " + env['timestamp']
 
-	window.open('mailto:ikhaliq42@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(content));
+	//window.open('mailto:ikhaliq42@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(content));
+	
+	// Step 1: Craft link
+	var href = 'mailto:ikhaliq42@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(content);
+	var mailToLink = document.getElementById("mailToLink");
+	mailToLink.href = href;
+	mailToLink.click();
+	
+	
 	// Step 2: Click it!
 }
 
@@ -31,4 +39,8 @@ function get_form_details() {
 		"feed": feed,
 		"comment": comment
 	}
+}
+
+function toggle_feedback() {
+	$('#container').toggleClass('visible');
 }
