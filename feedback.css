@@ -12,4 +12,9 @@ textarea {
 
 h4 {
 	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+}
+
+#submit_btn {
+	margin-top: 15px;
 }
