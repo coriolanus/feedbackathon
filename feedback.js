@@ -1,7 +1,7 @@
 window.onload = function() {
 	//alert("Loaded!");
 
-}:
+}
 
 function send_feedback() {
 	// Step 1: Craft link
