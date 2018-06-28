@@ -8,9 +8,10 @@ function send_feedback() {
 	var env = get_environment_details();
 	var details = get_form_details();
 
-	var subject = "Feedback from XXXX";
-	var content = "User Agent: " + env['userAgent'] + "\nTimesstamp: " + env['timestamp']
-				  + "\n\nMessage:\n" + details['comment'];
+	var subject = "Feedback for your website...";
+	var content = "Category: " + details['feed']
+				  + "\n\nMessage: " + details['comment'] 
+				  + "\n\nUser Agent: " + env['userAgent'] + "\nTimestamp: " + env['timestamp']
 
 	window.open('mailto:ikhaliq42@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(content));
 	// Step 2: Click it!
@@ -24,8 +25,10 @@ function get_environment_details() {
 }
 
 function get_form_details() {
+	var feed = $('input[name="feed"]:checked').parent('label').text();
 	var comment = $('#comment').val();
 	return {
+		"feed": feed,
 		"comment": comment
 	}
 }
