@@ -1,16 +1,18 @@
 window.onload = function() {
 	//alert("Loaded!");
 
-}:
+}
 
 function send_feedback() {
 	// Step 1: Craft link
 	var env = get_environment_details();
-	var form = get_form_details();
+	var details = get_form_details();
 
 	var subject = "Feedback from XXXX";
-	var content = env + form;
+	var content = "User Agent: " + env['userAgent'] + "\nTimesstamp: " + env['timestamp']
+				  + "\n\nMessage:\n" + details['comment'];
 
+	window.open('mailto:ikhaliq42@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(content));
 	// Step 2: Click it!
 }
 
