@@ -7,7 +7,11 @@
 	<script type="text/javascript" src="feedback.js"></script>
 </head>
 <body>
-	<div id="feedback" class="container">
+	<div id="container">
+	<div id="tab">
+		<div onclick="toggle_feedback();">Feedback</div>
+	</div>
+	<div id="feedback">
 	<h4>Feedback</h4>
 	<form>
 		<div class="radio">
@@ -29,6 +33,7 @@
 		<button class="btn">Never mind</button>
 		<button class="btn btn-primary" onclick="get_form_details();">Submit</button>
 	</form>
+	</div>
 	</div>
 </body>
 

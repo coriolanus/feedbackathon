@@ -4,13 +4,16 @@ window.onload = function() {
 }
 
 function send_feedback() {
-	// Step 1: Craft link
+	// Step 0: Assemble body of email
 	var env = get_environment_details();
 	var form = get_form_details();
 
-	var subject = "Feedback from XXXX";
+	var subject = "Feedback on APPNAME";
 	var content = env + form;
-
+	
+	// Step 1: Craft link
+	var href = "mailto://" + contact + "?subject=" + subject + "&body=" + content;
+	
 	// Step 2: Click it!
 }
 
@@ -26,4 +29,8 @@ function get_form_details() {
 	return {
 		"comment": comment
 	}
+}
+
+function toggle_feedback() {
+	$('#container').toggleClass('visible');
 }
