@@ -9,3 +9,7 @@ body {background-color: transparent;}
 textarea {
 	width: 300px;
 }
+
+h4 {
+	border-bottom: 1px solid black;
+}
